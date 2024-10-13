@@ -5,21 +5,61 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Abante</title>
     <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              moradoClaro: '#964EC2',
+              moradoOscuro: '#682E8C',
+            }
+          }
+        }
+      }
+    </script>
+
+    <style>
+      @font-face {
+        font-family: "JetBrains Mono";
+        src: url('JetBrainsMono-VariableFont_wght.ttf') format("truetype");
+      }
+      
+      .jetbrains {
+        font-family: 'JetBrains Mono', monospace;
+      }
+
+      .quicksand {
+        font-family: 'Quicksand', sans-serif;
+      }
+    </style>
+
   </head>
-  <body class='h-screen flex flex-col items-center'>
-    <nav class='font-jetbrains w-full h-[60px] flex justify-evenly items-center text-xl'>
+  <body class='flex flex-col items-center'>
+    <nav class='jetbrains w-full h-[60px] flex justify-evenly items-center text-xl'>
       <h2>Inicio</h2>
       <h2>¿Quienés somos?</h2>
       <h2>Servicios</h2>
       <h2>Contactanos</h2>
     </nav>
 
-    <div class='w-full h-full flex justify-center items-center'>
+    <!-- Inicio -->
+    <section class='w-full h-screen flex justify-center items-center'>
       <div class='flex flex-col items-center '>
         <img src="./assets/logo.png" width='300px' alt="logo abante">
-        <h1 class='text-[150px] '>abante</h1>
-        <h2 class='text-[36px]'>Soluciones tecnológicas</h2>
+        <h1 class='quicksand text-moradoOscuro text-[150px] '>abante</h1>
+        <h2 class='jetbrains text-moradoClaro text-[36px]'>Soluciones tecnológicas</h2>
       </div>
-    </div>
+    </section>
+
+
+    <!-- Quienes somos -->
+    <section class='w-full h-screen bg-red-500'></section>
+
+    <!-- Servicios -->
+    <section class='w-full h-screen bg-blue-500'></section>
+
+    <!-- Contactanos -->
+    <section class='w-full h-screen bg-yellow-500'></section>
   </body>
 </html>
