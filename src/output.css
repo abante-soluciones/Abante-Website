@@ -554,65 +554,79 @@ video {
   display: none;
 }
 
+@font-face {
+  font-family: 'JetBrains Mono';
+
+  src: url('/assets/fonts/JetBrainsMono-VariableFont_wght.ttf') format('ttf');
+
+  font-weight: 400;
+
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Quicksand';
+
+  src: url('/assets/fonts/Quicksand-Regular.ttf') format('ttf');
+
+  font-weight: 400;
+
+  font-style: normal;
+}
+
 .flex {
   display: flex;
-}
-
-.h-\[15\%\] {
-  height: 15%;
-}
-
-.h-\[200px\] {
-  height: 200px;
-}
-
-.h-\[100px\] {
-  height: 100px;
-}
-
-.h-\[80px\] {
-  height: 80px;
 }
 
 .h-\[60px\] {
   height: 60px;
 }
 
+.h-full {
+  height: 100%;
+}
+
+.h-screen {
+  height: 100vh;
+}
+
 .w-full {
   width: 100%;
+}
+
+.flex-col {
+  flex-direction: column;
 }
 
 .items-center {
   align-items: center;
 }
 
-.justify-between {
-  justify-content: space-between;
+.justify-center {
+  justify-content: center;
 }
 
 .justify-evenly {
   justify-content: space-evenly;
 }
 
-.bg-red-600 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(220 38 38 / var(--tw-bg-opacity));
+.font-jetbrains {
+  font-family: JetBrains Mono, monospace;
 }
 
-.bg-purple-300 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(216 180 254 / var(--tw-bg-opacity));
+.font-quicksand {
+  font-family: Quicksand, monospace;
 }
 
-.text-3xl {
-  font-size: 1.875rem;
-  line-height: 2.25rem;
+.text-\[150px\] {
+  font-size: 150px;
 }
 
-.font-bold {
-  font-weight: 700;
+.text-\[36px\] {
+  font-size: 36px;
 }
 
-.underline {
-  text-decoration-line: underline;
+.text-xl {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
 }
