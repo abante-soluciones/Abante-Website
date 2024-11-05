@@ -1,0 +1,104 @@
+body {
+  margin: 0;
+  width: 100%;
+  background-color: #F7F7F7;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.container {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+@media (max-width: 1526px) {
+  .container {
+    max-width: 1280px;
+  }
+}
+
+@media (max-width: 1280px) {
+  .container {
+    max-width: 1024px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .container {
+    max-width: 768px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    max-width: 640px;
+  }
+}
+
+@media (max-width: 640px) {
+  .container {
+    max-width: 475px;
+  }
+}
+
+@media (max-width: 475px) {
+  .container {
+    width: 100%;
+  }
+}
+
+.hero {
+  height: 85vh;
+  background-color: #F7F7F7;
+  position: relative;
+}
+
+.hero_background {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: end;
+}
+
+.hero_polygon {
+  background-color: #682E8C;
+  width: 60%;
+  height: 100%;
+  clip-path: polygon(24% 0, 100% 0, 100% 100%, 0% 100%);
+}
+
+.hero_content {
+  top: 0;
+  left: 0;
+  z-index: 10;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.title {
+  width: 40%;
+}
+
+.title h1 {
+  font-size: 3rem;
+  color: #682E8C;
+}
+
+.boton_contactanos {
+  background-color: #682E8C;
+  padding: 1rem 2rem;
+  width: fit-content;
+  color: #F7F7F7;
+  border-radius: 2rem;
+}
+
+.quienes_somos {
+  height: 80vh;
+  background-color: #964EC2;
+}
