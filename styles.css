@@ -50,7 +50,7 @@ body {
 }
 
 .hero {
-  height: 85vh;
+  height: 80vh;
   background-color: #F7F7F7;
   position: relative;
 }
@@ -101,4 +101,17 @@ body {
 .quienes_somos {
   height: 80vh;
   background-color: #964EC2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.quienes_somos_background {
+  width: 80%;
+  height: 80%;
+  background-color: #F7F7F7;
+  border-radius: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
