@@ -13,42 +13,6 @@ body {
   padding-right: 0.5rem;
 }
 
-@media (max-width: 1526px) {
-  .container {
-    max-width: 1280px;
-  }
-}
-
-@media (max-width: 1280px) {
-  .container {
-    max-width: 1024px;
-  }
-}
-
-@media (max-width: 1024px) {
-  .container {
-    max-width: 768px;
-  }
-}
-
-@media (max-width: 768px) {
-  .container {
-    max-width: 640px;
-  }
-}
-
-@media (max-width: 640px) {
-  .container {
-    max-width: 475px;
-  }
-}
-
-@media (max-width: 475px) {
-  .container {
-    width: 100%;
-  }
-}
-
 .hero {
   height: 80vh;
   background-color: #F7F7F7;
@@ -86,8 +50,12 @@ body {
 }
 
 .title h1 {
-  font-size: 3rem;
+  font-size: 3vw;
   color: #682E8C;
+}
+
+img {
+  width: 30vw;
 }
 
 .boton_contactanos {
@@ -112,6 +80,108 @@ body {
   background-color: #F7F7F7;
   border-radius: 32px;
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
 }
+
+.quienes_somos_text {
+  width: 40%;
+  text-align: center;
+}
+
+.quienes_somos_text h2 {
+  font-size: 2.5rem;
+  color: #682E8C;
+}
+
+.quienes_somos_text p {
+  font-size: 1.5rem;
+  color: #964EC2;
+}
+
+.sonora {
+  width: 30%;
+}
+
+.servicios {
+  height: 80vh;
+  background-color: #F7F7F7;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.servicios img {
+  width: 35vw;
+}
+
+.servicios h2 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #682E8C;
+}
+
+.servicios h3 {
+  color: #682E8C;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.servicios p {
+  font-size: 1.5rem;
+  color: #964EC2;
+}
+
+.servicios_text {
+  text-align: center;
+  width: 30%;
+}
+
+.valores {
+  height: 80vh;
+  background-color: #682E8C;
+}
+
+.contactanos {
+  height: 80vh;
+  background-color: #F7F7F7;
+}
+
+
+
+@media (max-width: 1526px) {
+  .container {
+    max-width: 1280px;
+  }
+}
+
+@media (max-width: 1280px) {
+  .container {
+    max-width: 1024px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .container {
+    max-width: 768px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    max-width: 640px;
+  }
+}
+
+@media (max-width: 640px) {
+  .container {
+    max-width: 475px;
+  }
+}
+
+@media (max-width: 475px) {
+  .container {
+    width: 100%;
+  }
+}
+
