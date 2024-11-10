@@ -4,17 +4,65 @@
 
 body {
   margin: 0;
+  padding: 0;
   width: 100%;
   background-color: #F7F7F7;
   font-family: 'JetBrains Mono', monospace;
 }
 
-.container {
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  z-index: 20;
   width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
+}
+
+.navbar a {
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+
+.navbar a:hover {
+  font-weight: 800;
+}
+
+.navbar-colored {
+  background-color: #F7F7F7;
+  box-shadow: 5px -1px 12px -5px black;
+}
+
+.navbar-transparent {
+  background-color: transparent;
+}
+
+.navbar-transparent a {
+  color: #F7F7F7;
+}
+
+.logo_container {
+  display: flex;
+  align-items: center;
+  margin: 0 2rem;
+  gap: 1rem;
+}
+
+.logo_container h2 {
+  font-family: 'Quicksand';
+  font-size: 2rem;
+  color: #682E8C;
+}
+
+.links {
+  display: flex;
+  gap: 2rem;
+  margin: 0 2rem;
+}
+
+.navbar img{
+  width: 5rem;
+  margin: 0.5rem 0;
 }
 
 .hero {
@@ -60,14 +108,6 @@ body {
 
 img {
   width: 30vw;
-}
-
-.boton_contactanos {
-  background-color: #682E8C;
-  padding: 1rem 2rem;
-  width: fit-content;
-  color: #F7F7F7;
-  border-radius: 2rem;
 }
 
 .quienes_somos {
@@ -160,7 +200,7 @@ img {
 .valores_card_container {
   display: flex;
   justify-content: center;
-  gap: 2.5rem;
+  gap: 2.5vw;;
   flex-wrap: wrap;
   padding-bottom: 4rem;
 }
@@ -173,6 +213,11 @@ img {
   max-width: 100%;
   border-radius: 2rem;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.valores_card:hover {
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.3);
+  transform: scale(1.08);
 }
 
 .valores_card h3 {
@@ -200,7 +245,8 @@ img {
   font-weight: 800;
 }
 
-.contactanos_text p, a{
+.contactanos_text p,
+.contactanos_text a {
   color: #964EC2;
   font-size: 1.5rem;
 }
@@ -224,7 +270,7 @@ img {
   border: none;
   color: #F7F7F7;
   background-color: #682E8C;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   font-family: 'JetBrains Mono';
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
   cursor: pointer;
@@ -233,48 +279,10 @@ img {
 
 .contactanos_botones a:hover {
   background-color: #964EC2;
+  transform: scale(1.05)
 }
 
 .contactanos_botones img {
   width: 2rem;
   color: #F7F7F7;
 }
-
-
-
-@media (max-width: 1526px) {
-  .container {
-    max-width: 1280px;
-  }
-}
-
-@media (max-width: 1280px) {
-  .container {
-    max-width: 1024px;
-  }
-}
-
-@media (max-width: 1024px) {
-  .container {
-    max-width: 768px;
-  }
-}
-
-@media (max-width: 768px) {
-  .container {
-    max-width: 640px;
-  }
-}
-
-@media (max-width: 640px) {
-  .container {
-    max-width: 475px;
-  }
-}
-
-@media (max-width: 475px) {
-  .container {
-    width: 100%;
-  }
-}
-

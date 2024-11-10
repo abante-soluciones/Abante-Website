@@ -9,23 +9,37 @@
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
     <title>abante</title>
+    <script defer src='script.js'></script>
   </head>
   <body>
-    <div></div>
-    <section class='hero container'>
+    <div class='navbar navbar-transparent' id='navbar'>
+      <div class="logo_container">
+        <img src="assets/logo.png" alt="">
+        <h2>abante</h2>
+      </div>
+      <div class="links">
+        <a href="#inicio">Inicio</a>
+        <a href="#quienes_somos">¿Quienés somos?</a>
+        <a href="#servicios">Servicios</a>
+        <a href="#valores">Valores</a>
+      </div>
+    </div>
+    <section class='hero' id='inicio'>
       <div class='hero_background'>
         <div class='hero_polygon'></div>
       </div>
       <div class='hero_content'>
         <div class='title'>
           <h1>Soluciones tecnologícas para tu negocio</h1>
-          <div class='boton_contactanos'>Contactanos</div>
+          <div class='contactanos_botones'>
+            <a href="#contactanos">Contactanos</a>
+          </div>
         </div>
-        <img src="assets/svg/hero_ilustration.svg" alt="">
+        <img src="assets/gif/solutions.gif" alt="">
       </div>
     </section>
 
-    <section class='quienes_somos container'>
+    <section class='quienes_somos' id='quienes_somos'>
       <div class='quienes_somos_background'>
         <div class="quienes_somos_text">
           <h2>¿Quienés somos?</h2>
@@ -36,7 +50,7 @@
       </div>
     </section>
 
-    <section class='servicios'>
+    <section class='servicios' id='servicios'>
       <img src="assets/svg/servicios_ilustration.svg" alt="">
       <div class="servicios_text">
         <h2>Nuestros servicios</h2>
@@ -49,7 +63,7 @@
       </div>
     </section>
 
-    <section class='valores'>
+    <section class='valores' id='valores'>
       <h2>Nuestros valores</h2>
       <div class="valores_card_container">
         <div class="valores_card">
@@ -67,7 +81,7 @@
       </div>
     </section>
 
-    <section class='contactanos'>
+    <section class='contactanos' id='contactanos'>
       <div class="contactanos_text">
         <h2>Contactanos</h2>
         <p><b>Email:</b> abante.soluciones@gmail.com</p>
