@@ -22,6 +22,7 @@ body {
 .navbar a {
   text-decoration: none;
   font-size: 1.2rem;
+  color: #682E8C;
 }
 
 .navbar a:hover {
@@ -60,9 +61,13 @@ body {
   margin: 0 2rem;
 }
 
-.navbar img{
+.navbar img {
   width: 5rem;
   margin: 0.5rem 0;
+}
+
+.mobile_logo {
+  display: none;
 }
 
 .hero {
@@ -93,27 +98,26 @@ body {
   width: 100%;
   height: 100%;
   display: flex;
-  flex-wrap: wrap;
   align-items: center;
   justify-content: space-around;
 }
 
 .title {
-  font-size: clamp(0.8rem, 4vw + 1rem, 2rem);
   width: 40%;
 }
 
 .title h1 {
-  font-size: 2.5vw;
+  font-size: clamp(0.5rem, 2vw + 1rem, 3rem);
+  margin-bottom: 2rem;
   color: #682E8C;
 }
 
-img {
-  width: 30vw;
+.animated {
+  width: 40vw;
 }
 
 .quienes_somos {
-  padding: 8vh 0;
+  padding: 4vh 0;
   background-color: #964EC2;
   display: flex;
   justify-content: center;
@@ -155,7 +159,7 @@ img {
 
 .servicios {
   background-color: #F7F7F7;
-  padding: 8vh 0;
+  padding: 4vh 0;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
@@ -170,7 +174,7 @@ img {
   font-size: clamp(1rem, 2vw + 1rem, 2rem);
   font-weight: 800;
   color: #682E8C;
-  margin: 2rem 0;
+  margin-bottom: 2vh;
 }
 
 .servicios h3 {
@@ -182,6 +186,7 @@ img {
 .servicios p {
   font-size: clamp(0.8rem, 1vw + 0.5rem, 2rem);
   color: #964EC2;
+  margin-bottom: 2vh;
 }
 
 .servicios_text {
@@ -200,7 +205,7 @@ img {
 .valores h2 {
   color: #F7F7F7;
   font-size: clamp(1.2rem, 2vw + 1rem, 2.5rem);
-  padding: 4rem 0;
+  padding: 4vh 0;
 }
 
 .valores_card_container {
@@ -208,7 +213,7 @@ img {
   justify-content: center;
   gap: 2.5vw;;
   flex-wrap: wrap;
-  padding-bottom: 4rem;
+  padding-bottom: 4vh;
 }
 
 .valores_card {
@@ -227,7 +232,7 @@ img {
 
 .valores_card h3 {
   color: #682E8C;
-  font-size: 1.5rem;
+  font-size: clamp(0.875rem, 0.25rem + 1.667vw, 1.75rem);
   margin-bottom: 0.5rem;
 }
 
@@ -238,7 +243,7 @@ img {
 }
 
 .contactanos {
-  padding: 4rem 0;
+  padding: 4vh 0;
   background-color: #F7F7F7;
   display: flex;
   justify-content: space-evenly;
@@ -247,27 +252,28 @@ img {
 
 .contactanos_text h2 {
   color: #682E8C;
-  font-size: 3rem;
+  font-size: clamp(1.2rem, 2vw + 1rem, 2.5rem);
   font-weight: 800;
 }
 
 .contactanos_text p,
 .contactanos_text a {
   color: #964EC2;
-  font-size: 1.5rem;
+  font-size: clamp(0.6rem, 1vw, 2rem);
+  margin: 1rem 0;
 }
 
-.contactanos img {
+.contactanos_ilustration {
   width: 30vw;
 }
 
 .contactanos_botones {
   display: flex;
-  gap: 2rem;
+  gap: 2vw;
 }
 
 .contactanos_botones a {
-  padding: 1rem 1.5rem;
+  padding: 1vw 2vw;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -276,7 +282,7 @@ img {
   border: none;
   color: #F7F7F7;
   background-color: #682E8C;
-  font-size: 1.2rem;
+  font-size: clamp(0.5rem, -0.214rem + 1.905vw, 1.5rem);
   font-family: 'JetBrains Mono';
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
   cursor: pointer;
@@ -289,7 +295,7 @@ img {
 }
 
 .contactanos_botones img {
-  width: 2rem;
+  width: 2vw;
   color: #F7F7F7;
 }
 
@@ -298,8 +304,52 @@ img {
     display: none;
   }
 
-  .quienes_somos_background {
+  .hero_content,
+  .hero_background,
+  .quienes_somos_background,
+  .contactanos {
     flex-direction: column;
+  }
+
+  .mobile_logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .mobile_logo h2 {
+    color: #682E8C;
+  }
+
+  .mobile_logo img {
+    width: 30vw;
+  }
+
+  .animated {
+    width: 60%;
+  }
+
+  .hero_content {
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .title {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .title h1 {
+    text-align: center;
+  }
+
+  .hero_polygon {
+    width: 100%;
+    height: 70%;
+    clip-path: polygon(0 19%, 100% 43%, 100% 100%, 0% 100%);
   }
 
   .quienes_somos_text,
@@ -308,8 +358,10 @@ img {
   }
 
   .sonora,
-  .servicios img {
-    width: 80%;
+  .servicios img,
+  .hero_ilustration,
+  .contactanos_ilustration {
+    width: 60%;
   }
 
   .servicios {
@@ -318,5 +370,9 @@ img {
 
   .valores_card {
     max-width: 90%;
+  }
+
+  .contactanos_text {
+    text-align: center;
   }
 }
