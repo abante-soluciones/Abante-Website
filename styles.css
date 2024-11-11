@@ -232,14 +232,14 @@ body {
 
 .valores_card h3 {
   color: #682E8C;
-  font-size: clamp(0.875rem, 0.25rem + 1.667vw, 1.75rem);
+  font-size: clamp(0.8rem, 1vw + 0.5rem, 2rem);
   margin-bottom: 0.5rem;
 }
 
 .valores_card p {
   color: #964EC2;
   line-height: 1.5;
-  font-size: clamp(0.6rem, 1vw, 2rem);
+  font-size: clamp(0.8rem, 1vw + 0.5rem, 1.5rem);
 }
 
 .contactanos {
@@ -259,7 +259,7 @@ body {
 .contactanos_text p,
 .contactanos_text a {
   color: #964EC2;
-  font-size: clamp(0.6rem, 1vw, 2rem);
+  font-size: clamp(0.8rem, 1vw + 0.5rem, 2rem);
   margin: 1rem 0;
 }
 
