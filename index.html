@@ -3,126 +3,103 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
     <title>abante</title>
-    <link rel="icon" href="assets/favicon.ico">
-    <script src="https://cdn.tailwindcss.com"></script>
-
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            colors: {
-              moradoClaro: '#964EC2',
-              moradoOscuro: '#682E8C',
-            }
-          }
-        }
-      }
-    </script>
-
-    <style>
-      @font-face {
-        font-family: "JetBrains Mono";
-        src: url('JetBrainsMono-VariableFont_wght.ttf') format("truetype");
-      }
-
-      @keyframes slideInFromTop {
-        0% {
-          transform: translateY(-20%);
-        }
-        100% {
-          transform: translateY(0);
-        }
-      }
-
-      @keyframes slideInFromBottom {
-        0% {
-          transform: translateY(20%);
-        }
-        100% {
-          transform: translateY(0);
-        }
-      }
-      
-      .jetbrains {
-        font-family: 'JetBrains Mono', monospace;
-      }
-
-      .quicksand {
-        font-family: 'Quicksand', sans-serif;
-      }
-
-      html {
-        scroll-behavior: smooth;
-        scroll-snap-type: y mandatory;
-      }
-
-      section {
-        scroll-snap-align: start;
-      }
-    </style>
-
+    <script defer src='script.js'></script>
   </head>
-  <body class='jetbrains flex flex-col items-center'>
-    <nav style='top: 0;' class='hidden md:flex jetbrains text-moradoOscuro bg-white sticky w-full h-[60px] justify-evenly items-center text-xl shadow'>
-      <a class='hover:underline hover:font-bold' href="#inicio">Inicio</a>
-      <a class='hover:underline hover:font-bold' href="#somos">¿Quienés somos?</a>
-      <a class='hover:underline hover:font-bold' href="#servicios">Servicios</a>
-      <a class='hover:underline hover:font-bold' href="#contactanos">Contactanos</a>
-    </nav>
+  <body>
+    <!-- Navbar -->
+    <div class='navbar navbar-transparent' id='navbar'>
+      <div class="logo_container">
+        <img src="assets/logo.png" alt="">
+        <h2>abante</h2>
+      </div>
+      <div class="links">
+        <a href="#inicio">Inicio</a>
+        <a href="#quienes_somos">¿Quienés somos?</a>
+        <a href="#servicios">Servicios</a>
+        <a href="#valores">Valores</a>
+      </div>
+    </div>
 
     <!-- Inicio -->
-    <section id='inicio' class='w-full h-screen flex justify-center items-center'>
-      <div class='flex flex-col items-center'>
-        <img class='w-[80%] md:w-[350px]' src="./assets/logo.png" alt="logo abante" style='animation: 1s ease-out 0s 1 slideInFromTop;'>
-        <h1 class='quicksand text-moradoOscuro text-[80px] md:text-[150px]' style='animation: 1s ease-out 0s 1 slideInFromBottom;'>abante</h1>
-        <h2 class='jetbrains text-moradoClaro text-[24px] md:text-[36px]' style='animation: 1s ease-out 0s 1 slideInFromTop;'>Soluciones tecnológicas</h2>
+    <section class='hero' id='inicio'>
+      <div class='hero_background'>
+        <div class='hero_polygon'></div>
+      </div>
+      <div class='hero_content'>
+        <div class='title'>
+          <h1>Soluciones tecnologícas para tu negocio</h1>
+          <div class='contactanos_botones'>
+            <a href="#contactanos">Contactanos</a>
+          </div>
+        </div>
+        <img src="assets/gif/solutions.gif" alt="">
       </div>
     </section>
 
     <!-- Quienes somos -->
-    <section id='somos' class='w-full h-screen jetbrains flex flex-col md:flex-row justify-evenly md:justify-center items-center'>
-      <div class='md:w-[40%] mx-8 flex flex-col justify-center text-center'>
-        <h2 class='text-moradoOscuro text-5xl mb-8'>¿Quiénes somos?</h2>
-        <p class='text-moradoClaro text-2xl mb-8'>Somos una empresa regional dedicada a brindar soluciones tecnológicas para MiPyMes.</p>
-        <p class='text-moradoClaro text-2xl'>Ofrecemos soluciones a la medida para cada necesidad tecnológica que tenga tu empresa.</p>
+    <section class='quienes_somos' id='quienes_somos'>
+      <div class='quienes_somos_background'>
+        <div class="quienes_somos_text">
+          <h2>¿Quienés somos?</h2>
+          <p>Somos una empresa regional dedicada a brindar soluciones tecnológicas para MiPyMes.</p>
+          <p>Ofrecemos soluciones a la medida para cada necesidad tecnológica que tenga tu empresa.</p>
+        </div>
+        <img class='sonora' src="assets/svg/mapa_sonora.svg" alt="">
       </div>
-      <img 
-        class='h-[80%] md:h-[80%]'
-        src="./assets/svg/mapa_sonora.svg" alt="mapa de la region">
     </section>
 
-    <!-- Servicios -->
-    <section id='servicios'
-      class='w-full h-screen jetbrains flex flex-col md:flex-row-reverse justify-evenly items-center'>
-      <div class='md:w-[40%] mx-8 flex flex-col justify-center text-center'>
-        <h2 class='text-moradoOscuro text-5xl mb-8'>Servicios</h2>
-        <p class='text-moradoClaro text-2xl mb-8'>
-          <b>Consultoria:</b><br>Analizamos las necesidades de tu empresa para proponer la solución más óptima.
-        </p>
-        <p class='text-moradoClaro text-2xl mb-8'>
-          <b>Desarrollo tecnológico a la medida:</b><br>Creamos la solución que ayude a tu empresa a mejorar sus procesos.
-        </p>
-        <p class='text-moradoClaro text-2xl'>
-          <b>Servicio técnico:</b><br>Acompañamiento cercano y especializado.
-        </p>
+    <!-- Servicios  -->
+    <section class='servicios' id='servicios'>
+      <img src="assets/svg/servicios_ilustration.svg" alt="">
+      <div class="servicios_text">
+        <h2>Nuestros servicios</h2>
+        <h3>Consultoria:</h3>
+        <p>Analizamos las necesidades de tu empresa para proponer la solución más óptima.</p>
+        <h3>Desarrollo tecnológico a la medida:</h3>
+        <p>Creamos la solución que ayude a tu empresa a mejorar sus procesos.</p>
+        <h3>Servicio técnico:</h3>
+        <p>Acompañamiento cercano y especializado.</p>
       </div>
-      <img class='md:w-[30%] w-[40%]' src="./assets/svg/icono_servicios.svg" alt="servicios">
+    </section>
+
+    <!-- Valores -->
+    <section class='valores' id='valores'>
+      <h2>Nuestros valores</h2>
+      <div class="valores_card_container">
+        <div class="valores_card">
+          <h3>Cercanía</h3>
+          <p>Establecemos relaciones de confianza y comunicación directa con nuestros clientes para comprender a fondo sus necesidades y brindarles un servicio personalizado.</p>
+        </div>
+        <div class="valores_card">
+          <h3>Eficiencia</h3>
+          <p>Nos enfocamos en desarrollar soluciones tecnológicas prácticas que optimicen los procesos internos de las MiPyMes, maximizando su productividad con los recursos adecuados.</p>
+        </div>
+        <div class="valores_card">
+          <h3>Compromiso</h3>
+          <p>Asumimos cada proyecto con responsabilidad, garantizando acompañamiento continuo y soporte técnico para asegurar el éxito y la satisfacción de nuestros clientes.</p>
+        </div>
+      </div>
     </section>
 
     <!-- Contactanos -->
-    <section id='contactanos' class='w-full h-screen flex flex-col justify-center items-center'>
-      <h2 class='text-moradoOscuro text-5xl mb-8'>Contactanos</h2>
-      <div class='text-moradoClaro text-2xl text-center'>
-        <h3 class='mb-4'><b>Email:</b> abante.soluciones@gmail.com</h3>
-        <h3 class='mb-4'><b>Facebook:</b> <a class='underline' href='https://www.facebook.com/abantedigital'>Abante</a></h3>
-        <h3 class='mb-4'><b>Instagram:</b> <a class='underline' href='https://www.instagram.com/abante.digital/'>@Abante.digital</a></h3>
-        <button 
-          class='hover:bg-moradoClaro bg-moradoOscuro text-white mt-8 px-8 py-4 rounded-3xl'
-          onclick='location.href="https://mail.google.com/mail/?view=cm&fs=1&to=abante.soluciones@gmail.com"'>
-          Enviar correo
-        </button>
+    <section class='contactanos' id='contactanos'>
+      <div class="contactanos_text">
+        <h2>Contactanos</h2>
+        <p><b>Email:</b> abante.soluciones@gmail.com</p>
+        <p><b>Instagram:</b> <a href='https://www.instagram.com/abante.digital/'>@abante.digital</a></p>
+        <p><b>Facebook:</b> <a href='https://www.facebook.com/abantedigital'>Abante</a></p>
+        <div class="contactanos_botones">
+          <a href='https://wa.me/6222781686?text=hola'><img src="assets/svg/whatsapp.svg" alt="">Enviar mensaje</a>
+          <a href='https://mail.google.com/mail/u/0/?fs=1&to=abante.soluciones@gmail.com&tf=cm'><img src="assets/svg/email.svg" alt="">Enviar correo</a>
+        </div>
       </div>
+      <img src="assets/svg/contactanos_ilustration.svg" alt="">
     </section>
 
   </body>

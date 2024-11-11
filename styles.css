@@ -1,0 +1,322 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+body {
+  width: 100%;
+  background-color: #F7F7F7;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  z-index: 20;
+  width: 100%;
+}
+
+.navbar a {
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+
+.navbar a:hover {
+  font-weight: 800;
+}
+
+.navbar-colored {
+  background-color: #F7F7F7;
+  box-shadow: 5px -1px 12px -5px black;
+}
+
+.navbar-transparent {
+  background-color: transparent;
+}
+
+.navbar-transparent a {
+  color: #F7F7F7;
+}
+
+.logo_container {
+  display: flex;
+  align-items: center;
+  margin: 0 2rem;
+  gap: 1rem;
+}
+
+.logo_container h2 {
+  font-family: 'Quicksand';
+  font-size: 2rem;
+  color: #682E8C;
+}
+
+.links {
+  display: flex;
+  gap: 2rem;
+  margin: 0 2rem;
+}
+
+.navbar img{
+  width: 5rem;
+  margin: 0.5rem 0;
+}
+
+.hero {
+  height: 80vh;
+  background-color: #F7F7F7;
+  position: relative;
+}
+
+.hero_background {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: end;
+}
+
+.hero_polygon {
+  background-color: #682E8C;
+  width: 60%;
+  height: 100%;
+  clip-path: polygon(24% 0, 100% 0, 100% 100%, 0% 100%);
+}
+
+.hero_content {
+  top: 0;
+  left: 0;
+  z-index: 10;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.title {
+  font-size: clamp(0.8rem, 4vw + 1rem, 2rem);
+  width: 40%;
+}
+
+.title h1 {
+  font-size: 2.5vw;
+  color: #682E8C;
+}
+
+img {
+  width: 30vw;
+}
+
+.quienes_somos {
+  padding: 8vh 0;
+  background-color: #964EC2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.quienes_somos_background {
+  max-width: 80%;
+  min-width: 90%;
+  background-color: #F7F7F7;
+  border-radius: 32px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.quienes_somos_text {
+  width: 40%;
+  text-align: center;
+}
+
+.quienes_somos_text h2 {
+  font-size: clamp(1rem, 2vw + 1rem, 2rem);
+  color: #682E8C;
+  margin: 1rem 0;
+}
+
+.quienes_somos_text p {
+  font-size: clamp(0.8rem, 1vw + 0.5rem, 2rem);
+  color: #964EC2;
+}
+
+.sonora {
+  width: 30%;
+  margin: 3rem 0;
+}
+
+.servicios {
+  background-color: #F7F7F7;
+  padding: 8vh 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.servicios img {
+  width: 35vw;
+}
+
+.servicios h2 {
+  font-size: clamp(1rem, 2vw + 1rem, 2rem);
+  font-weight: 800;
+  color: #682E8C;
+  margin: 2rem 0;
+}
+
+.servicios h3 {
+  color: #682E8C;
+  font-size: clamp(0.8rem, 1vw + 0.5rem, 2rem);
+  font-weight: 700;
+}
+
+.servicios p {
+  font-size: clamp(0.8rem, 1vw + 0.5rem, 2rem);
+  color: #964EC2;
+}
+
+.servicios_text {
+  text-align: center;
+  width: 30%;
+}
+
+.valores {
+  background-color: #682E8C;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.valores h2 {
+  color: #F7F7F7;
+  font-size: clamp(1.2rem, 2vw + 1rem, 2.5rem);
+  padding: 4rem 0;
+}
+
+.valores_card_container {
+  display: flex;
+  justify-content: center;
+  gap: 2.5vw;;
+  flex-wrap: wrap;
+  padding-bottom: 4rem;
+}
+
+.valores_card {
+  background-color: white;
+  padding: 1rem;
+  text-align: center;
+  max-width: 25%;
+  border-radius: 2rem;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.valores_card:hover {
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.3);
+  transform: scale(1.08);
+}
+
+.valores_card h3 {
+  color: #682E8C;
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.valores_card p {
+  color: #964EC2;
+  line-height: 1.5;
+  font-size: clamp(0.6rem, 1vw, 2rem);
+}
+
+.contactanos {
+  padding: 4rem 0;
+  background-color: #F7F7F7;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.contactanos_text h2 {
+  color: #682E8C;
+  font-size: 3rem;
+  font-weight: 800;
+}
+
+.contactanos_text p,
+.contactanos_text a {
+  color: #964EC2;
+  font-size: 1.5rem;
+}
+
+.contactanos img {
+  width: 30vw;
+}
+
+.contactanos_botones {
+  display: flex;
+  gap: 2rem;
+}
+
+.contactanos_botones a {
+  padding: 1rem 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 2rem;
+  gap: 0.5rem;
+  border: none;
+  color: #F7F7F7;
+  background-color: #682E8C;
+  font-size: 1.2rem;
+  font-family: 'JetBrains Mono';
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.contactanos_botones a:hover {
+  background-color: #964EC2;
+  transform: scale(1.05)
+}
+
+.contactanos_botones img {
+  width: 2rem;
+  color: #F7F7F7;
+}
+
+@media (max-width: 600px) {
+  .navbar {
+    display: none;
+  }
+
+  .quienes_somos_background {
+    flex-direction: column;
+  }
+
+  .quienes_somos_text,
+  .servicios_text {
+    width: 90%;
+  }
+
+  .sonora,
+  .servicios img {
+    width: 80%;
+  }
+
+  .servicios {
+    flex-direction: column-reverse;
+  }
+
+  .valores_card {
+    max-width: 90%;
+  }
+}
